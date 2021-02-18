@@ -12,6 +12,6 @@ public class EmployeesService {
     private EmployeesDAO employeesDAO;
 
     public void addEmployee(Employees employee) {
-        employeesDAO.newEmployee(employee);
+        employeesDAO.addEmployee(employee);
     }
 }

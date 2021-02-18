@@ -2,6 +2,7 @@ package com.montrealcollege.exercise15a.model;
 
 import org.springframework.stereotype.Component;
 
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
@@ -10,6 +11,7 @@ import java.util.Date;
 public class Employees {
     @NotNull(message="Required")
     @Min(value=2, message="Id must be greater than 1")
+    @Max(value=99, message="Id must be greater than 1")
     private Integer employeeId;
     @NotNull(message="Required")
     private String firstName;
@@ -18,7 +20,7 @@ public class Employees {
     @NotNull(message="Required")
     private String email;
     private String phoneNumber;
-    @NotNull(message="Required")
+//    @NotNull(message="Required")
     private Date hireDate;
     @NotNull(message="Required")
     private String jobId;
@@ -27,6 +29,9 @@ public class Employees {
     private Integer managerId;
     private Integer departmentId;
 
+    public Employees() {
+        hireDate = new Date();
+    }
     public Integer getEmployeeId() {
         return employeeId;
     }

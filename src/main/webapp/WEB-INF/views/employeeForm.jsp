@@ -10,7 +10,8 @@
     </style>
 </head>
 <body>
-<f:form action="createEmployee" method="POST" modelAttribute="employee">
+<h1>Add New Employee</h1>
+<f:form action="create" method="POST" modelAttribute="employee">
 
     <label for="employeeIdInput">Emplyee Id: </label>
     <f:input path="employeeId" id="employeeIdInput"/>*
@@ -32,10 +33,10 @@
     <f:input path="phoneNumber" id="phoneInput"/>
     <f:errors path="phoneNumber" cssClass="errorMsg"/>
     <br><br>
-    <label for="hireDateInput">Hire Date: </label>
-    <f:input path="hireDate" id="hireDateInput"/>*
-    <f:errors path="hireDate" cssClass="errorMsg"/>
-    <br><br>
+<%--    <label for="hireDateInput">Hire Date: </label>--%>
+<%--    <f:input path="hireDate" id="hireDateInput"/>*--%>
+<%--    <f:errors path="hireDate" cssClass="errorMsg"/>--%>
+<%--    <br><br>--%>
     <label for="jobIdInput">Job Id: </label>
     <f:input path="jobId" id="jobIdInput"/>*
     <f:errors path="jobId" cssClass="errorMsg"/>

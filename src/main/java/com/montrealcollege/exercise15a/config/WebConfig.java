@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.montrealcollege")
+@ComponentScan(basePackages = "com.montrealcollege.exercise15a")
 public class WebConfig {
 
     @Bean
